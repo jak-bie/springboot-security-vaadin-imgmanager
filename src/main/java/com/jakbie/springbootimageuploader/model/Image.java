@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.nio.file.Files;
 
 @Entity
 public class Image {
@@ -11,10 +12,10 @@ public class Image {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String imageAdress;
+    private String imageAddress;
 
-    public Image(String imageAdress) {
-        this.imageAdress = imageAdress;
+    public Image(String imageAddress) {
+        this.imageAddress = imageAddress;
     }
 
     public Image() {
@@ -28,11 +29,12 @@ public class Image {
         this.id = id;
     }
 
-    public String getImageAdress() {
-        return imageAdress;
+    public String getImageAddress() {
+        return imageAddress;
     }
 
-    public void setImageAdress(String imageAdress) {
-        this.imageAdress = imageAdress;
+    public void setImageAddress(String imageAddress) {
+        this.imageAddress = imageAddress;
     }
+
 }
